@@ -1,0 +1,80 @@
+$black: #3e3e3e;
+$grey: #a9a9a9;
+$width: 200px;
+$height: 0;
+.square {  
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border: 2px solid $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4px;
+  font-size: 24px;
+}
+// .sm {
+//   width: $width/2;
+// }
+.square-row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 24px;
+}
+
+.checkbox-label {
+  text-align: center;
+  line-height: 24px;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  z-index: -99;
+  color: $grey;
+}
+
+.custom-checkbox {
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.custom-checkbox:checked {
+  & + .checkbox-label {
+    color: $black;
+  }
+}
+// .middle {
+//   box-sizing: border-box;
+//   height: 100%;
+//   border: 1px solid blue;
+//   // background-image: url('http://upload.wikimedia.org/wikipedia/commons/d/d3/Tajik_mountains_edit.jpg');
+//   // background-size: cover;
+//   // margin: 4px auto;
+// }
+.time {
+  width: $width;
+  display: flex;
+  justify-content: space-between;
+}
+
+.jumbotron {
+  border: 2px solid $black;
+  width: 240px;
+  // height: 200px;
+  // display:flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: space-between;
+}
+.field {
+  margin: 24px;
+}

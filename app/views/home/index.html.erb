@@ -1,7 +1,27 @@
- <h1> Welcome </h1>
- <button type="button">
- <%= link_to 'Sign in', new_user_session_path %>
+ <div class="container">
+ <h1> Habit Machine </h1>
+ <h2> A powerful Habit Building tool </h2>
+ <div class="container-row">
+ <% if current_user.nil?%>
+ <%= link_to new_user_session_path do%>
+ <button type="button" class="btn">Sign In
  </button>
- <button type="button">
 
-    <%= link_to 'Sign up', new_user_registration_path %> </button>
+     <%end %>
+
+    <%= link_to new_user_registration_path do%> 
+ <button type="button" class="btn"> Sign Up
+    </button>
+    <%end %>
+
+    <% else %>
+    <%= link_to 'Habits', habits_path %>
+    <%= link_to 'Log', logs_path %>
+<%end %>
+</div>
+<%=link_to info_path do %>
+    <button type="button" class="btn">
+    Read More
+    </button>
+    <%end%>
+</div>

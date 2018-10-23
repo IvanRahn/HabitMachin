@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>User</th>
+      <th>H1</th>
+      <th>H2</th>
+      <th>H3</th>
+      <th>H4</th>
+      <th>Waking time</th>
+      <th>Sleep time</th>
+      <th>Image</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logs.each do |log| %>
+      <tr>
+        <td><%= log.date %></td>
+        <td><%= log.user.id %></td>
+        <td><%= log.h1 %></td>
+        <td><%= log.h2 %></td>
+        <td><%= log.h3 %></td>
+        <td><%= log.h4 %></td>
+        <td><%= log.waking_time %></td>
+        <td><%= log.sleep_time %></td>
+        <td><%= log.image %></td>
+        <td><%= log.content %></td>
+        <td><%= link_to 'Show', log %></td>
+        <td><%= link_to 'Edit', edit_log_path(log) %></td>
+        <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Log', new_log_path %>
+<%= link_to 'Home Page', root_path %>

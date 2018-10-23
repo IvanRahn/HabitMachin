@@ -1,0 +1,21 @@
+$paper: #EEEEEE;
+$grey: #A9A9A9;
+$black: #3E3E3E;
+$blue: #217DDA;
+
+.btn {
+  width: 64px;
+  height: 16px;
+  border-radius: 20px;
+  &:hover {
+    background-color: $blue;
+    color: $paper;
+  }
+}
+.action {
+
+}
+
+input[type=submit]{
+  margin: 0 auto;
+}

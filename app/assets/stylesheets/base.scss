@@ -1,0 +1,27 @@
+$paper: #EEEEEE;
+$grey: #A9A9A9;
+$black: #3E3E3E;
+$blue: #217DDA;
+
+body {
+  background-color: $paper;
+  color: $black;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  // &:hover {
+  //   background-color: $blue;
+  //   color: $paper;
+  // }
+}
+button {
+  padding: 0;
+}
+

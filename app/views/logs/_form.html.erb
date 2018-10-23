@@ -1,0 +1,63 @@
+<%= form_with(model: log, local: true) do |form| %>
+  <% if log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(log.errors.count, "error") %> prohibited this log from being saved:</h2>
+
+      <ul>
+      <% log.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :h1 %>
+    <%= form.text_area :h1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h2 %>
+    <%= form.text_area :h2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h3 %>
+    <%= form.text_area :h3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h4 %>
+    <%= form.text_area :h4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :waking_time %>
+    <%= form.time_select :waking_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sleep_time %>
+    <%= form.time_select :sleep_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_area :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
