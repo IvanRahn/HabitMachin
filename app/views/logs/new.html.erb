@@ -1,5 +1,5 @@
 <h1>New Log</h1>
 
-<%= render 'form', log: @log %>
-
+<%#<%= render 'form', log: @log %>
+<%=render 'square-big', log: @log, hash: @habits_hash %>
 <%= link_to 'Back', logs_path %>

@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_22_042413) do
+ActiveRecord::Schema.define(version: 2018_10_24_223518) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "hstore"
   enable_extension "plpgsql"
 
   create_table "habits", force: :cascade do |t|
@@ -28,16 +29,24 @@ ActiveRecord::Schema.define(version: 2018_10_22_042413) do
   create_table "logs", force: :cascade do |t|
     t.date "date"
     t.bigint "user_id"
-    t.text "h1"
-    t.text "h2"
-    t.text "h3"
-    t.text "h4"
     t.time "waking_time"
     t.time "sleep_time"
     t.text "image"
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "h1"
+    t.string "h2"
+    t.string "h3"
+    t.string "h4"
+    t.string "h5"
+    t.string "h6"
+    t.string "h7"
+    t.string "h8"
+    t.string "h9"
+    t.string "h10"
+    t.string "h11"
+    t.string "h12"
     t.index ["user_id"], name: "index_logs_on_user_id"
   end
 

@@ -1,13 +1,19 @@
 class LogsController < ApplicationController
   before_action :set_log, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-
   # GET /logs
   # GET /logs.json
   def index
-    @logs = Log.all
+    @logs = current_user.logs
+    hash
   end
-
+def hash
+  @habits = current_user.habits
+    @habits_hash = Hash.new
+    @habits.each do |habit|
+      @habits_hash[habit.position] = habit.symbol
+    end
+  end
   # GET /logs/1
   # GET /logs/1.json
   def show
@@ -16,6 +22,7 @@ class LogsController < ApplicationController
   # GET /logs/new
   def new
     @log = Log.new
+    hash
   end
 
   # GET /logs/1/edit
@@ -71,6 +78,6 @@ class LogsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def log_params
-    params.require(:log).permit(:date, :user_id, :h1, :h2, :h3, :h4, :waking_time, :sleep_time, :image, :content)
+    params.require(:log).permit(:date, :user_id, :hash, :waking_time, :sleep_time, :image, :content)
   end
 end
