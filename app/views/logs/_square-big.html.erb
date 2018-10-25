@@ -1,4 +1,4 @@
-<%= form_with(model: log, local: true) do |form| %>
+<%= form_with(model: Log.new, scope: :log, local: true) do |f| %>
   <% if log.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(log.errors.count, "error") %> prohibited this log from being saved:</h2>
@@ -13,11 +13,12 @@
 
  <div class="square sm">
    <div class="square-row">
-   <%= form_with(model: log, local: true) do |f|%>
-  
     <% for id in 1..6 %>
     
-     <div class="symbol"><%if hash.key?(id)%><input type="checkbox" class="custom-checkbox" name="" id="<%=id%>" ><%end%>
+     <div class="symbol">
+     <%if hash.key?(id)%>
+     <input type="checkbox" class="custom-checkbox" name="h<%=id%>" value="<%=hash[id]%>" >
+     <%end%>
       <label for="" class="checkbox-label" ><%=hash[id]%></label></div>
       
     <%end%>
@@ -25,7 +26,7 @@
   <div class="square-row">
     <% for id in 7..12 %>
    
-    <div class="symbol"> <%if hash.key?(id)%><input type="checkbox" class="custom-checkbox" name="" id="<%=id%>"><%end%>
+    <div class="symbol"> <%if hash.key?(id)%><input type="checkbox" class="custom-checkbox" name="h<%=id%>" value="a"><%end%>
       <label for="" class="checkbox-label" ><%=hash[id]%></label></div>
    
     <%end%>
@@ -34,8 +35,7 @@
   
  </div>  
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
-  <%end%>
  <% end %>
   

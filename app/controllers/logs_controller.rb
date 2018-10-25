@@ -78,6 +78,6 @@ def hash
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def log_params
-    params.require(:log).permit(:date, :user_id, :hash, :waking_time, :sleep_time, :image, :content)
+    params.require(:log).permit(:date, :user_id, :h1, :h2, :h3, :h4, :h5, :h6, :h7, :h8, :h9, :h10, :h11, :h12, :waking_time, :sleep_time, :image, :content)
   end
 end
