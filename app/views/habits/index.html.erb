@@ -11,16 +11,32 @@
 
   <tbody>
     <% @habits.each do |habit| %>
+    <div>
       <tr>
+        <td><%=habit.symbol%></td>
+        <td><%=habit.name%></td>
+        <td><%=habit.position%></td>
+
         <td><%= link_to 'Show', habit %></td>
-        <td><%= link_to 'Edit', edit_habit_path(habit) %></td>
         <td><%= link_to 'Destroy', habit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
+  </div>
 </table>
-
 <br>
+
+
+<%=render 'square', hash: @hash%>
+<%#<% 12.times do |id| %>
+<%#<% if @array.include?(id) then%>
+<%#<%=checked = id%>
+<%#<%else %>
+<%#<%checked = false%>
+<%#<%end%>
+<%#<h2><%=checked%></h2>
+<%#<%end%>
+<%#<%end%>
 
 <%= link_to 'New Habit', new_habit_path %>
 <%= link_to 'Home Page', root_path %>

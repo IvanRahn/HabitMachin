@@ -1,0 +1,21 @@
+ 
+ <div class="square sm">
+   <div class="square-row">
+    <% for id in 1..6 %>
+     <div class="symbol"><input type="checkbox" class="custom-checkbox" name="" id="<%=id%>" <%="checked" if hash.key?(id)%>>
+      <label for="" class="checkbox-label" ><%=hash[id]%></label></div>
+    <%end%>
+ </div>
+  <div class="square-row">
+    <% for id in 7..12 %>
+    <div class="symbol"><input type="checkbox" class="custom-checkbox" name="" id="<%=id%>" <%="checked" if hash.key?(id)%>>
+      <label for="" class="checkbox-label" ><%=hash[id]%></label></div>
+    <%end%>
+ </div>
+ </div>
+   <div class="time">
+    <span>Time1</span>
+    <span>time 2</span>
+  </div> 
+ </div>  
+  

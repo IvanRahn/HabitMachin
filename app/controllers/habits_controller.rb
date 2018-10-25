@@ -4,7 +4,11 @@ class HabitsController < ApplicationController
   # GET /habits
   # GET /habits.json
   def index
-    @habits = Habit.all
+    @habits = current_user.habits
+    @hash = Hash.new
+    @habits.each do |habit|
+      @hash[habit.position] = habit.symbol
+    end
   end
 
   # GET /habits/1
