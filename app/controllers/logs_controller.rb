@@ -4,16 +4,17 @@ class LogsController < ApplicationController
   # GET /logs
   # GET /logs.json
   def index
-    @logs = current_user.logs
-    hash
+    @logs = current_user.logs.as_json
   end
-def hash
-  @habits = current_user.habits
+
+  def hash
+    @habits = current_user.habits
     @habits_hash = Hash.new
     @habits.each do |habit|
       @habits_hash[habit.position] = habit.symbol
     end
   end
+
   # GET /logs/1
   # GET /logs/1.json
   def show
