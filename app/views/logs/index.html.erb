@@ -4,12 +4,10 @@
 
 
  <% @logs.each do |log| %>
-<%= render 'square', hash: @habits_hash %>     
+<%= render 'square', hash: log%>     
     <% end %>
   </tbody>
 </table>
-<%= current_user.habits.inspect %>
-<%#<%= render 'square' %>
 <br>
 <%= @hash %>
 <%= link_to 'New Log', new_log_path %>

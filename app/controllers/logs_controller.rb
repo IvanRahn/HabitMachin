@@ -4,16 +4,17 @@ class LogsController < ApplicationController
   # GET /logs
   # GET /logs.json
   def index
-    @logs = current_user.logs
-    hash
+    @logs = current_user.logs.as_json
   end
-def hash
-  @habits = current_user.habits
+
+  def hash
+    @habits = current_user.habits
     @habits_hash = Hash.new
     @habits.each do |habit|
       @habits_hash[habit.position] = habit.symbol
     end
   end
+
   # GET /logs/1
   # GET /logs/1.json
   def show
@@ -78,6 +79,6 @@ def hash
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def log_params
-    params.require(:log).permit(:date, :user_id, :hash, :waking_time, :sleep_time, :image, :content)
+    params.require(:log).permit(:date, :user_id, :h1, :h2, :h3, :h4, :h5, :h6, :h7, :h8, :h9, :h10, :h11, :h12, :waking_time, :sleep_time, :image, :content)
   end
 end
