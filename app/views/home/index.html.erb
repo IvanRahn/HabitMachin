@@ -1,27 +1,15 @@
  <div class="container">
  <h1> Habit Machine </h1>
  <h2> A powerful Habit Building tool </h2>
- <div class="container-row">
+ <div class="button-group">
  <% if current_user.nil?%>
- <%= link_to new_user_session_path do%>
- <button type="button" class="btn">Sign In
- </button>
-
-     <%end %>
-
-    <%= link_to new_user_registration_path do%> 
- <button type="button" class="btn"> Sign Up
-    </button>
-    <%end %>
-
+        <%= link_to "Sign In", new_user_session_path, class: "btn"%>
+        <%= link_to "Sign Up", new_user_registration_path, class: "btn"%> 
     <% else %>
-    <%= link_to 'Habits', habits_path %>
-    <%= link_to 'Log', logs_path %>
-<%end %>
+         <%= link_to 'Habits', habits_path %>
+           <%= link_to 'Log', logs_path %>
+<% end %>
 </div>
-<%=link_to info_path do %>
-    <button type="button" class="btn">
-    Read More
-    </button>
-    <%end%>
+ <%=link_to "Read More", info_path, class: "btn" %>
+
 </div>

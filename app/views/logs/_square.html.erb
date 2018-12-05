@@ -1,7 +1,5 @@
- <%=hash%>
  <div class="square sm">
    <div class="square-row">
-   
     <% for id in 1..6 %>
      <div class="symbol">
       <label for="" class="checkbox-label-checked" ><%=hash["h#{id}"] if hash.has_key?("h#{id}") && hash["h#{id}"] != "0"%></label></div>
@@ -9,13 +7,12 @@
  </div>
   <div class="square-row">
     <% for id in 7..12 %>
-    <div class="symbol"><input type="checkbox" class="custom-checkbox" name="" id="<%=id%>" <%="checked" if hash.key?(id)%>>
-      <label for="" class="checkbox-label" ><%=hash[id]%></label></div>
+   <div class="symbol">
+      <label for="" class="checkbox-label-checked" ><%=hash["h#{id}"] if hash.has_key?("h#{id}") && hash["h#{id}"] != "0"%></label></div>
     <%end%>
  </div>
  </div>
    <div class="time">
- 
   </div> 
  </div>  
   

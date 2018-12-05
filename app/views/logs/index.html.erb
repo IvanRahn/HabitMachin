@@ -1,14 +1,10 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Logs</h1>
-
-
  <% @logs.each do |log| %>
 <%= render 'square', hash: log%>     
     <% end %>
   </tbody>
 </table>
 <br>
-<%= @hash %>
-<%= link_to 'New Log', new_log_path %>
-<%= link_to 'Home Page', root_path %>
+<%= link_to 'New Log', new_log_path, class: "button" %>
+<%= link_to 'Home Page', root_path, class: "button"  %>

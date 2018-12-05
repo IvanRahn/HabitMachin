@@ -4,13 +4,19 @@ $black: #3E3E3E;
 $blue: #217DDA;
 
 .btn {
-  width: 64px;
-  height: 16px;
+  width: 80px;
   border-radius: 20px;
+  text-align: center;
+  line-height: 16px;
+  background-color: $blue;
+  &:visited {
+    color: inherit;
+  }
   &:hover {
     background-color: $blue;
     color: $paper;
   }
+  
 }
 .action {
 
@@ -19,4 +25,9 @@ $blue: #217DDA;
 input[type=submit]{
   margin: 0 auto;
   
+}
+.hero-image {
+  background-image: image-url('habit.jpeg');
+  background-size: cover; /* Resize the background image to cover the entire container */
+
 }

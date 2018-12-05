@@ -11,19 +11,23 @@
   <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "current-password" %>
+    <div>
+    <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+    </div>
   </div>
 
   <% if devise_mapping.rememberable? -%>
-    <div class="field">
+    <div class="field button-group">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
   <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <div class="actions button-group">
+    <%= f.submit "Log in", class: "button-primary" %>
+    <span> or </span>
+    <%= link_to "Sign Up", new_user_registration_path, class: "button" %>
   </div>
 <% end %>
 </div>
 </div>
-<%= render "devise/shared/links" %>
