@@ -1,3 +1,5 @@
+ <%=hash["date"]%>
+ 
  <div class="square sm">
    <div class="square-row">
     <% for id in 1..6 %>
@@ -12,7 +14,11 @@
     <%end%>
  </div>
  </div>
+ <% if !hash["waking_time"].nil? and !hash["sleep_time"].nil?%>
    <div class="time">
+   <%=hash["waking_time"].strftime("%H:%M")%>
+   <%=hash["sleep_time"].strftime("%H:%M")%>
   </div> 
+  <%end%>
  </div>  
   
