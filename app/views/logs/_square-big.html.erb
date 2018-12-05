@@ -10,7 +10,9 @@
       </ul>
     </div>
   <% end %> 
-
+  <div class="c-full-width">
+ <%=Date.today %>
+</div>
  <div class="square sm">
    <div class="square-row">
     <% for id in 1..6 %>
@@ -32,6 +34,11 @@
    </div>
   
  </div>  
+ <div class="time">
+ <%=f.time_select :waking_time %>
+  <%=f.time_select :sleep_time %>
+</div>
+ <div>
   <div class="actions">
     <%= f.submit %>
   </div>

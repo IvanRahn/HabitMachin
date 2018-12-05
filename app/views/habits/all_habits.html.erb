@@ -1,0 +1,14 @@
+<h1>All Habits</h1>
+    <% @habits.each do |habit| %>
+    <div>
+        <td><%=habit.symbol%></td>
+        <td><%=habit.name%></td>
+        <td><%=habit.position%></td>
+
+        <td><%= link_to 'Delete', habit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </div>
+</table>
+<br>

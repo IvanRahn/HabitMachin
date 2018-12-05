@@ -1,8 +1,8 @@
 <%= form_with(model: habit, local: true) do |form| %>
+<div class="container">
   <% if habit.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(habit.errors.count, "error") %> prohibited this habit from being saved:</h2>
-
       <ul>
       <% habit.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,19 +10,22 @@
       </ul>
     </div>
   <% end %>
-<div> 
 <%= form.label :habit %>
 <%= form.text_field :name %>
-</div>
-<div> 
+
 <%= form.label :habit_symbol %>
+
+
 <%= form.text_field :symbol %>
-</div>
-<div> 
+
+
 <%= form.label :position %>
+
+
 <%= form.text_field :position %>
-</div>
+
   <div class="actions">
     <%= form.submit %>
+  </div>
   </div>
 <% end %>

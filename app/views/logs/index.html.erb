@@ -1,10 +1,21 @@
 
 <h1>Logs</h1>
+  <div class="">
+            <%= link_to new_log_path, class:"card plus-card" do %>
+              <svg height="40" viewBox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+              </svg>
+              <h4>Add entry</h4>
+      <% end %>
+  </div>
  <% @logs.each do |log| %>
+ <div>
 <%= render 'square', hash: log%>     
     <% end %>
   </tbody>
 </table>
 <br>
+</div>
 <%= link_to 'New Log', new_log_path, class: "button" %>
 <%= link_to 'Home Page', root_path, class: "button"  %>
