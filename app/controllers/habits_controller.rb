@@ -25,6 +25,10 @@ class HabitsController < ApplicationController
   def edit
   end
 
+  def all_habits
+    @habits = current_user.habits
+  end
+
   # POST /habits
   # POST /habits.json
   def create

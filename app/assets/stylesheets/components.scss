@@ -31,3 +31,9 @@ input[type=submit]{
   background-size: cover; /* Resize the background image to cover the entire container */
 
 }
+
+.c-full-width {
+  width: 100%;
+  box-sizing: border-box; 
+  text-align: center;
+}
