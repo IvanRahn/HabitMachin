@@ -47,10 +47,8 @@ class HabitsController < ApplicationController
     respond_to do |format|
       if @habit.update(habit_params)
         format.html { redirect_to @habit, notice: "Habit was successfully updated." }
-        format.json { render :show, status: :ok, location: @habit }
       else
         format.html { render :edit }
-        format.json { render json: @habit.errors, status: :unprocessable_entity }
       end
     end
   end

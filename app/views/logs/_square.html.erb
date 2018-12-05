@@ -1,7 +1,5 @@
- <%=hash%>
  <div class="square sm">
    <div class="square-row">
-   
     <% for id in 1..6 %>
      <div class="symbol">
       <label for="" class="checkbox-label-checked" ><%=hash["h#{id}"] if hash.has_key?("h#{id}") && hash["h#{id}"] != "0"%></label></div>
@@ -15,7 +13,6 @@
  </div>
  </div>
    <div class="time">
- 
   </div> 
  </div>  
   

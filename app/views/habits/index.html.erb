@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Habits</h1>
 
@@ -28,15 +27,7 @@
 
 
 <%=render 'square', hash: @hash%>
-<%#<% 12.times do |id| %>
-<%#<% if @array.include?(id) then%>
-<%#<%=checked = id%>
-<%#<%else %>
-<%#<%checked = false%>
-<%#<%end%>
-<%#<h2><%=checked%></h2>
-<%#<%end%>
-<%#<%end%>
+
 
 <%= link_to 'New Habit', new_habit_path %>
 <%= link_to 'Home Page', root_path %>
